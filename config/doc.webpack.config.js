@@ -1,11 +1,11 @@
 const path = require('path');
-process.env.NODE_ENV = 'development';
+// process.env.NODE_ENV = 'development';
 // import Icon from './icon.png';
 
 let distPaths = {
 	// dist - original path
 	// docs - for github pages
-	root: 'docs'
+	root: 'dist'
 };
 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -30,7 +30,11 @@ let config = {
 					{loader: 'css-loader'},
 					{
 						loader: 'sass-loader',
-						options: {includePaths: ['src/style.ssas', distPaths + '/css/style.css']}
+						options: {
+							sassOptions:{
+								includePaths: ['src/style.ssas', 'dist/style.css']
+							}
+						}
 					},
 				]
 			},

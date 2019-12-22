@@ -1,7 +1,7 @@
 // process.env.NODE_ENV = 'development';
 // console.log('START');
 // eslint-disable-next-line no-undef
-process.env.NODE_ENV = 'production';
+// process.env.NODE_ENV = 'production';
 
 // eslint-disable-next-line no-undef
 const HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -27,7 +27,9 @@ let config = {
 				}, {
 					loader: 'sass-loader', // compiles Sass to CSS
 					options: {
-						includePaths: ['src/style.ssas', 'dist/style.css']
+						sassOptions:{
+							includePaths: ['src/style.ssas', 'dist/style.css']
+						}
 					}
 				},
 				]

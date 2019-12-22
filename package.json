@@ -9,7 +9,7 @@
     "deploy": "sh scripts/deploy_gh-pages.sh",
     "dev": "webpack-dev-server --mode development --open --config ./config/development.webpack.config.js ",
     "build": "webpack --mode production --config ./config/production.webpack.config.js",
-    "doc": "webpack --mode development  --config ./config/doc.webpack.config.js "
+    "doc": "webpack --mode production  --config ./config/doc.webpack.config.js "
   },
   "keywords": [],
   "devDependencies": {

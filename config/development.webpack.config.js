@@ -3,7 +3,7 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-process.env.NODE_ENV = 'development';
+// process.env.NODE_ENV = 'development';
 // import Icon from './icon.png';
 
 let distPaths = {

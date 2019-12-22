@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-repo="SPA_calendar_to_do_list"
+repo="webpack-server-pixi-js"
 dir="dist"
 autor="Bizhev"
 
@@ -8,13 +8,11 @@ autor="Bizhev"
 # STOP error
 set -e
 
-yarn generate
+yarn doc
 cd $dir
 
 # echo 'www.example.com' > CNAME
 
-
-git init
 git add -A
 git commit -m ''
 
