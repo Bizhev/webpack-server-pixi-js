@@ -1,15 +1,16 @@
 import * as PIXI from 'pixi.js';
 
 class ParticleText {
-	constructor(){
+	constructor() {
 		this.app = new PIXI.Application();
 		document.body.appendChild(this.app.view);
 		this.addObjects();
 	}
-	addObjects(){
+
+	addObjects() {
 		PIXI.loader.add('bunny', '../img/BMWi8.jpg').load((loader, resources) => {
 			this.bunny = new PIXI.Sprite(resources.bunny.texture);
-			this.bunny.texture.frame = new PIXI.Rectangle(132,132,132,132);
+			this.bunny.texture.frame = new PIXI.Rectangle(132, 132, 132, 132);
 
 			// Setup the position of the bunny
 			this.bunny.x = this.app.renderer.width / 2;
@@ -25,7 +26,8 @@ class ParticleText {
 		});
 
 	}
-	animate(){
+
+	animate() {
 		// Listen for frame updates
 		this.app.ticker.add(() => {
 			// each frame we spin the bunny around a bit
@@ -35,4 +37,4 @@ class ParticleText {
 }
 
 let pop = new ParticleText();
-console.log('p',pop);
+console.log('p', pop);
